@@ -12,7 +12,6 @@
     <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
  </blockquote>
 ``` 
-###![](D:\НАРНИЯ\REACT PROJECT\FINISHED PROJECTS\JS-2.0\work(no)\Screenshot_2.png)i
 
 ### 
 * ### Tag `<q>`
@@ -24,7 +23,6 @@
 ```html
  <p>Станислав Лец утверждал: <q>Чаще всего выход там, где был вход</q>.</p>
 ``` 
-###![](D:\НАРНИЯ\REACT PROJECT\FINISHED PROJECTS\JS-2.0\work(no)\tag-q.png)i
 ###
 * ### Разница `<q> и <blockquote>`
 * `<q>` - строчный
@@ -36,7 +34,6 @@
 <abbr title="Cascading Style Sheets">CSS</abbr> - сокращение полного названия</li>
 <abbr title="HyperText Markup Language">HTML - сокращение полного названия.
 ```
-###![](D:\НАРНИЯ\REACT PROJECT\FINISHED PROJECTS\JS-2.0\work(no)\Screenshot_3.png)o
 ###
 
 * ### Tag `<adress> Выделения контактной информации`
@@ -57,9 +54,6 @@
 </address>
 ```
 
-### <img height="200" src="D:\НАРНИЯ\REACT PROJECT\FINISHED PROJECTS\JS-2.0\work(no)\HTML-address.png" width="350"/>
-###
-
 ### Tag `<bdo>`
 * ### Направление текста
 
@@ -69,4 +63,4 @@
 <br>
 <bdo dir="rtl">Этот текст написан справа налево</bdo> //справа налево
 ```
-###![](D:\НАРНИЯ\REACT PROJECT\FINISHED PROJECTS\JS-2.0\work(no)\Screenshot_4.png)i
+

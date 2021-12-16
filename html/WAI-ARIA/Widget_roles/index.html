@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--button -->
+<h1>ARIA: Button Example</h1>
+<ul id="nameList"></ul>
+<label for="newName">Enter your Name: </label>
+<input type="text" id="newName">
+<span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)">Add Name</span>
+
+<br>
+<hr>
+
+<!--checkbox-->
+<h1>ARIA: Checkbox Example</h1>
+<span role="checkbox" id="chkPref" aria-checked="false" onclick="changeCheckbox()" onKeyPress="changeCheckbox()"
+      tabindex="0" aria-labelledby="chk1-label"></span>
+<label id="chk1-label" onclick="changeCheckbox()" onKeyPress="changeCheckbox()">Remember my preferences</label>
+
+<br>
+<hr>
+
+<!--gridcell-->
+<h1>ARIA: gridcell role Examples</h1>
+<h3 id="table-title">Jovian gas giant planets</h3>
+<div role="grid" aria-describedby="table-title">
+    <div role="rowgroup">
+        <div role="row">
+            <div role="columnheader">Name</div>
+            <div role="columnheader">Diameter (km)</div>
+            <div role="columnheader">Length of day (hours)</div>
+            <div role="columnheader">Distance from Sun (10<sup>6</sup>km)</div>
+            <div role="columnheader">Number of moons</div>
+        </div>
+    </div>
+    <div role="rowgroup">
+        <div role="row">
+            <div role="gridcell">Jupiter</div>
+            <div role="gridcell">142,984</div>
+            <div role="gridcell">9.9</div>
+            <div role="gridcell">778.6</div>
+            <div role="gridcell">67</div>
+        </div>
+    </div>
+    <div role="rowgroup">
+        <div role="row">
+            <div role="gridcell">Saturn</div>
+            <div role="gridcell">120,536</div>
+            <div role="gridcell">10.7</div>
+            <div role="gridcell">1433.5</div>
+            <div role="gridcell">62</div>
+        </div>
+    </div>
+</div>
+
+<h3>Example 2:</h3>
+
+<table role="grid">
+    <thead>
+    <!-- etc -->
+    </thead>
+    <tbody>
+    <tr>
+        <td role="gridcell">17</td>
+        <td role="gridcell">64</td>
+        <td role="gridcell">18</td>
+    </tr>
+    <tr>
+        <td role="gridcell">17</td>
+        <td role="gridcell">64</td>
+        <td role="gridcell">18</td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+<hr>
+
+<!--link-->
+<h1>ARIA: link role Example</h1>
+
+<span data-href="https://uapp-llc.com/" tabindex="0" id="link1" role="link" class="link">
+  Fake accessible link created using a span
+</span>
+
+<p><a href="https://uapp-llc.com/" target="_blank">Actual real link</a></p>
+
+<br>
+<hr>
+
+<!--progressbar-->
+<h1>ARIA: progressbar role Examples</h1>
+<h3>Example 1: Basic progressbar with percentage values</h3>
+<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
+
+<h3>Example 2: Using aria-valuetext</h3>
+<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuetext="Step 2: Copying files... "
+     aria-valuemax="100">
+    Step 2: Copying files...
+</div>
+<br>
+<hr>
+
+<!--radio-->
+<h1>ARIA: radio Example</h1>
+<h3 id="rg1_label">Lunch Options</h3>
+
+<div role="radiogroup">
+    <input role="radio" type="radio" aria-checked="true"> One<br>
+    <input role="radio" type="radio" aria-checked="false"> Two<br>
+    <input role="radio" type="radio" aria-checked="false"> Three
+</div>
+
+<br>
+<hr>
+
+<!--Slider-->
+<h1>ARIA: slider Example</h1>
+<label for="fader">Volume</label>
+<input type="range"
+       id="fader"
+       min="1"
+       max="100"
+       value="50"
+       step="1"
+       aria-valuemin="1"
+       aria-valuemax="100"
+       aria-valuenow="50"
+       oninput="outputUpdate(value)">
+<output for="fader" id="volume">50</output>
+
+<br>
+<hr>
+
+<!--Switch-->
+<h1>ARIA: switch Example</h1>
+<button role="switch" aria-checked="true"
+        id="speakerPower" class="switch">
+    <span>off</span>
+    <span>on</span>
+</button>
+<label for="speakerPower" class="switch">Speaker power</label>
+
+<br>
+<hr>
+
+<!--Tab-->
+<h1>ARIA: Tab Example:</h1>
+<div class="tabs">
+    <div role="tablist" aria-label="Sample Tabs">
+        <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">
+            First Tab
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">
+            Second Tab
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1">
+            Third Tab
+        </button>
+    </div>
+    <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+        <p>Content for the first panel</p>
+    </div>
+    <div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+        <p>Content for the second panel</p>
+    </div>
+    <div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
+        <p>Content for the third panel</p>
+    </div>
+</div>
+
+<br>
+<hr>
+
+<!--Textbox-->
+<h1>ARIA: Textbox role Example:</h1>
+<label for="txtbox">Enter your five-digit zipcode</label>
+<input type="text" placeholder="5-digit zipcode" id="txtbox"/>
+
+<!-- Multi-line text area -->
+<label for="txtboxMultiline">Enter the tags for the article</label>
+<textarea id="txtboxMultiline" required></textarea>
+
+<br>
+<hr>
+
+
+<script src="index.js"></script>
+</body>
+</html>
