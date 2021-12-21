@@ -131,6 +131,7 @@
    position: relative;
    background: #fff;
 }
+
 .black {
    width: 180px;
    height: 180px;
@@ -155,17 +156,19 @@
    right: 30px;
    position: absolute;
 }
+
 .svg {
-mix-blend-mode: screen;
+   mix-blend-mode: screen;
    position: relative;
    left: 50px;
    top: 50px;
 }
+
 .wrap2 {
    width: 200px;
    height: 300px;
    background-size: 200px 200px;
    background-repeat: no-repeat;
-   background-image: linear-gradient(to right,blue 0%,red 100%),url('./img/social_balloon_google_24547.png');
+   background-image: linear-gradient(to right, blue 0%, red 100%), url('./img/social_balloon_google_24547.png');
    background-blend-mode: color-burn;
 }
