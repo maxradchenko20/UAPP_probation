@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       span#mySpanBlock {
+          background-color: red;
+          display: block;
+       }
+
+       span#mySpanInlineBlock {
+          background-color: green;
+          display: inline-block;
+          width: 100px;
+          height: 22px;
+       }
+
+       li {
+          display: inline-block;
+          list-style: none;
+          border: 1px solid red;
+          vertical-align: middle;
+       }
+
+    </style>
+</head>
+<body>
+
+<h2>Display: inline</h2>
+
+<div style="width:400px">
+    ...<span style="background: lightgreen">
+  la la la la la la la la la la la la la la la
+    la la la la la la la la la la la la la la la
+</span>...
+</div>
+<br>
+<div style="border:1px solid black">
+    <span style="border:1px solid red">inline</span>
+    <span style="border:1px solid red">inline</span>
+</div>
+
+<br>
+<hr>
+
+<h2>Display: block</h2>
+<p>Lorem ipsum <span id="mySpanBlock"> dolor sit amet</span>, consectetur adipisicing elit. </p>
+
+<div style="border:2px solid black; padding: 5px">
+    <div style="border:2px solid blue; width: 50%">first</div>
+    <div style="border:2px solid red">second</div>
+</div>
+<br>
+<hr>
+
+<h2>Display: inline-block</h2>
+<p>Lorem ipsum <span id="mySpanInlineBlock"> dolor sit amet</span>, consectetur adipisicing elit. </p>
+
+<ul style="border:1px solid black; padding:0">
+    <li>Inline-block<br>weight/height default</li>
+    <li style="width:100px;height:100px">Inline-block<br></li>
+    <li style="width:60px;height:60px">Inline-block<br></li>
+    <li style="width:100px;height:60px">Inline-block<br></li>
+    <li style="width:60px;height:100px">Inline-block<br></li>
+</ul>
+<br>
+<hr>
+
+<h2>Display: list-item</h2>
+
+<div style="display: list-item; list-style:inside square">item 1</div>
+<div style="display: list-item; list-style:inside square">item 2</div>
+<br>
+<hr>
+
+</body>
+</html>

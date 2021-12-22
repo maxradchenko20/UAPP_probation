@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selectors</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       div p {
+          color: red;
+       }
+
+       div > p {
+          color: blue;
+       }
+
+       div + p {
+          color: violet;
+       }
+
+       div ~ p {
+          color: deepskyblue;
+       }
+
+       li:nth-child(1) {
+          list-style-type: none;
+          color: red;
+       }
+
+       li:last-child {
+          list-style-type: none;
+          color: violet;
+          text-transform: uppercase;
+       }
+
+       li p:first-letter {
+          font-weight: 800;
+          font-size: 30px;
+       }
+
+       a[target=_blank]:hover {
+          color: black;
+          text-shadow: rgb(84, 84, 155, 8);
+       }
+
+       a[href^="http"] {
+          display: block;
+          text-decoration: none;
+       }
+
+       a[href$=".ua/"] {
+          display: inline-block;
+          border-bottom: 2px solid black;
+          color: red;
+       }
+
+       a[href*="#"] {
+          display: block;
+          font-size: 20px;
+       }
+    </style>
+</head>
+<body>
+
+<div>
+    <p>item-1</p>
+    <p>item-2</p>
+</div>
+<p>item-3</p>
+<p>item-4</p>
+<ul>
+    <li><p>Text</p></li>
+    <li>
+        <p>Text</p>
+    </li>
+</ul>
+<a href="https://www.youtube.com/" target="_blank">Google</a>
+<a href="https://dou.ua/" target="_blank">DOU.UA</a>
+
+<a href="#" target="_blank">#</a>
+
+
+</body>
+</html>

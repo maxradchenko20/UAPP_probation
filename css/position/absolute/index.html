@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Absolute</title>
+
+    <style>
+
+       h2 {
+          position: absolute;
+          right: 0;
+          top: 0;
+       }
+
+       main {
+          position: relative;
+          background-color: gold;
+          height: 200px;
+          padding: 10px;
+       }
+
+       p {
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          width: 200px;
+          background: limegreen;
+          color: white;
+          padding: 10px;
+
+       }
+
+    </style>
+
+
+</head>
+<body>
+
+<div style="background: #fee; width: 500px">
+    position<del>relative</del>
+    <h2 style="background: #aef; margin: 0;">this title</h2>
+    <div>text tsxt text... <br/>
+        .text text text!
+    </div>
+</div>
+<br>
+<hr>
+
+<main>
+    Parent position: relative
+    <p>Absolute position from the parent</p>
+</main>
+</body>
+</html>
