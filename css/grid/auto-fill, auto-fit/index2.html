@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+       .grid * {
+          padding: 10px 15px;
+          background-color: rgb(96, 143, 204);
+          border: 1px solid rgb(24, 84, 133);
+          text-align: center;
+          font-size: 1.2rem;
+          color: #fff;
+          font-family: sans-serif;
+       }
+
+       .grid {
+          display: grid;
+          grid-gap: 20px;
+       }
+
+       .auto-fill {
+          grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+       }
+
+       .auto-fit {
+          grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+       }
+
+
+    </style>
+
+
+</head>
+<body>
+<h2>auto-fill</h2>
+<p>Makes the grid autocomplete by wrapping cells on new lines.</p>
+<div class="grid auto-fill">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+</div>
+<br>
+<hr>
+
+<h2>auto-fit</h2>
+<p>Makes the grid autocomplete by wrapping cells on new lines so that it takes up all the available space on the
+    line.</p>
+<div class="grid auto-fit">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+</div>
+
+</body>
+</html>
