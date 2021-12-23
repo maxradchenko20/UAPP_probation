@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+       .wrapper * {
+          font-size: 14px;
+          margin: 5px;
+       / / ко всем элментам внутри класса text
+       }
+
+       p {
+          color: coral;
+       }
+
+       .text p {
+          font-size: 18px;
+       / / обращение ко всем p внутри класса . text
+       }
+
+       img + p { /* Обращание к след <p> (первому)после <img> */
+          font-weight: 800;
+       / / обращение ко всем p внутри класса . text
+       }
+
+       img ~ p { /*  //Все  <p> после тега  <img> , не вложенные а соседи внизу*/
+          color: mediumvioletred;
+          font-size: 20px;
+       }
+
+
+       .list > li { /* обращение к <li> где .list родитель а не дед*/
+          border: 1px solid black;
+       }
+
+       input[type=text] {
+          border: 5px solid darkblue;
+       }
+
+       a[href*="link"] { /* Обращение к ссылке где в href есть слово 'link'*/
+          color: yellow;
+       }
+
+       a[href^="link"] { /* Обращение к ссылке где в href начинаеться на слово 'link' */
+          color: red;
+       }
+
+       img[src$=".jpg"] { /* обращаение к фото с типом jpg*/
+          display: none;
+       }
+
+       p {
+          border: 1px solid black;
+       }
+
+       p:not(.item) { /* всем p кроме p.item */
+          border-radius: 10px;
+       }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="inner">
+        <ul class="list">
+            <li> List Item
+                <ul>
+                    <li>Child</li>
+                </ul>
+            </li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+        <a href="link/google.com">Link</a>
+        <a href="https://www.ukr.net/link">Link</a>
+        <div class="text">
+            <p class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam deserunt, dolorum
+                eius facere
+                fugiat illum mollitia nisi numquam obcaecati odit pariatur, quia ullam. Doloremque explicabo
+                necessitatibus recusandae unde voluptatibus?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores consequuntur doloribus illum
+                incidunt iusto nostrum provident sed temporibus velit! Consectetur corporis fugit iste laboriosam magnam
+                necessitatibus nesciunt officia quibusdam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa doloremque ducimus error eum
+                facere fugit, illo incidunt ipsam laboriosam magni, neque, officiis quasi quo repellat repellendus
+                tempore totam!</p>
+            <img src="https://img.freepik.com/free-vector/shining-circle-of-purple-lighting-isolated-on-dark-background_1441-2396.jpg?size=626&ext.jpg"
+                 alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi distinctio dolorem
+                doloribus, facilis fuga ipsam iure laudantium maiores minus molestiae nemo nisi placeat quod ratione
+                saepe sint unde velit!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ea est fuga inventore ipsa maiores
+                molestiae molestias possimus quasi quisquam ratione, repudiandae sed. Amet aspernatur excepturi non,
+                obcaecati praesentium voluptates?</p>
+        </div>
+        <p>Сосед</p>
+        <input type="text">
+        <input type="number">
+    </div>
+</div>
+
+</body>
+</html>
